@@ -34,14 +34,17 @@ namespace MauiAppTempoAgora
                                          $"Tem Máx: {t.temp_max} \n" +
                                          $"Temp Min: {t.temp_min} \n" +
                                          $"Descrição do clima: {t.description} \n" +
-                                         $"Velocidade do vento: {t.speed} \n" +
-                                         $"Visibilidade: {t.visibility} \n";
+                                         $"Velocidade do vento: {t.speed} \n" + //Adicionado a velocidade do vento
+                                         $"Visibilidade: {t.visibility} \n"; // Adicionado a visibilidade
+
+                        lbl_res.Text = dados_previsao;
 
                     }
                     else 
                     {
 
-                        lbl_res.Text = "Sem dados de previsão";
+                        lbl_res.Text = "O nome da cidade não foi encontrado"; 
+                        // Substituito para aparecer mensagem que o nome da cidade não foi encontrado
                     }
                 }
                 else 
